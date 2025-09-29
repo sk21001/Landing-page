@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iPhone 17 Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo-area">
+      <img src="./images/apple_logo.png" alt="Apple" class="apple-logo" />
+      <span class="logo-txt">Apple Store</span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Service</a>
+      <a href="#">Contact</a>
+    </nav>
+    <button class="preorder-btn">More Info</button>
+  </header>
+
+  <main>
+    <div class="hero-left animated-fadein">
+      <h1 class="headline animated-slidein">iPhone 17 pro</h1>
+      <div class="model-color" id="modelColor">Color: <span>Orange</span></div>
+      <div class="specs animated-slidein">
+        <ul>
+          <li>Super Retina XDR OLED, 120Hz, Dolby Vision</li>
+          <li>A19 Bionic Chip, 5G Support</li>
+          <li>Triple-lens camera with ProRAW 8K video</li>
+          <li>MagSafe 3 Wireless and 5400mAh Battery</li>
+          <li>iOS 19, Face ID, In-display TouchID</li>
+        </ul>
+      </div>
+       <div class="options-area">
+        
+        <div class="option-selector">
+          <label>Color:</label>
+          <div class="color-circles">
+            <button class="color-btn orange active" title="Cosmic Orange" onclick="selectColor('orange')"></button>
+            <button class="color-btn black" title="Deep Blue" onclick="selectColor('black')"></button>
+            <button class="color-btn white" title="Sliver" onclick="selectColor('white')"></button>
+          </div>
+        </div>
+     
+        <div class="option-selector">
+          <label>Storage:</label>
+          <div class="storage-btns">
+            <button class="storage-btn active" onclick="selectStorage(512)">512 GB</button>
+            <button class="storage-btn" onclick="selectStorage(1024)">1 TB</button>
+            <button class="storage-btn" onclick="selectStorage(2048)">2 TB</button>
+          </div>
+        </div>
+      
+        <div class="option-selector">
+          <label>RAM:</label>
+          <div class="ram-btns">
+            <button class="ram-btn active" onclick="selectRAM(6)">6 GB</button>
+            <button class="ram-btn" onclick="selectRAM(8)">8 GB</button>
+            <button class="ram-btn" onclick="selectRAM(12)">12 GB</button>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    <div class="hero-right animated-fadein">
+      <div class="media-carousel" id="mediaCarousel">
+        <img src="./images/iphone-gold.png" alt="iPhone Orange" class="carousel-item show" id="img-orange" />
+        <img src="./images/iphone-black.png" alt="iPhone Black" class="carousel-item" id="img-black" />
+        <img src="./images/iphone-blue.png" alt="iPhone White" class="carousel-item" id="img-white" />
+        <video class="carousel-item" id="sample-video" src="./images/Apple iPhone 17 Pro.mp4" controls poster="https://www.colorhexa.com/fa8231.png"></video>
+        <div class="media-controls">
+          <button onclick="prevMedia()">&#8592;</button>
+          <span id="carouselIndicator">1/4</span>
+          <button onclick="nextMedia()">&#8594;</button>
+        </div>
+      </div>
+
+        <div class="price-row animated-fadein">
+        <div>
+          <span class="price-label">Price: </span>
+          <span class="price" id="priceDisplay">₹2,19,999</span>
+        </div>
+        <button class="mini-preorder-btn" onclick="window.location.href='https://www.apple.com/in/shop/buy-iphone/iphone-17-pro';">Pre Order</button>
+
+      </div>
+
+
+     
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

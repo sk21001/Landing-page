@@ -1,0 +1,150 @@
+
+
+.features-section, .about-section, .testimonials-section, .faq-section, .newsletter-section {
+    padding: 60px 0 40px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    background: linear-gradient(90deg, #00ffa1, #00e0ff);
+    
+    -webkit-text-fill-color: transparent;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: rgba(40, 70, 90, 0.2);
+    border-radius: 1.5rem;
+    padding: 32px 24px;
+    width: 320px;
+    min-width: 260px;
+    box-shadow: 0 8px 48px 0 rgba(0,255,161,0.15);
+    transition: transform .26s cubic-bezier(.18, .81, .41, 1), box-shadow .26s;
+}
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 16px 64px 0 rgba(0,255,161,0.29);
+}
+
+.glass {
+    backdrop-filter: blur(12px) saturate(180%);
+    background: rgba(255,255,255,0.13);
+    border-radius: 1.5rem;
+}
+
+.icon-camera::before { content: '📷'; font-size: 2.2rem; display: block; }
+.icon-cpu::before    { content: '💻'; font-size: 2.2rem; display: block; }
+.icon-battery::before{ content: '🔋'; font-size: 2.2rem; display: block; }
+
+.about-section p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-size: 1.14rem;
+}
+
+.testimonials-section .testimonial-slider {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    width: 320px;
+    min-height: 100px;
+    padding: 32px 18px 26px 18px;
+    font-size: 1.08rem;
+    position: relative;
+    opacity: 0.5;
+    transform: scale(0.98);
+    transition: opacity .6s, transform .4s;
+}
+.active-testimonial {
+    opacity: 1 !important;
+    transform: scale(1.06) !important;
+    background: rgba(0,224,255,0.10);
+}
+
+.testimonial-card span {
+    display: block;
+    margin-top: 16px;
+    color: #00ffa1;
+    font-weight: 600;
+}
+
+.faq-section .faq-list {
+    max-width: 660px;
+    margin: 0 auto;
+    text-align: left;
+}
+.faq-item h4 {
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 12px 0 0 0;
+}
+.faq-item p {
+    margin-bottom: 14px;
+    line-height: 1.4;
+    color: #ccc;
+}
+
+.newsletter-section {
+    max-width: 700px;
+    margin: 36px auto;
+}
+.newsletter-box {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 22px;
+}
+.newsletter-box input[type="email"] {
+    padding: 13px 20px;
+    border-radius: 1.4rem;
+    border: none;
+    min-width: 260px;
+}
+.newsletter-box button {
+    font-size: 1.07rem;
+}
+
+footer {
+    padding: 28px 0 16px 0;
+    background: rgba(40,70,90,0.24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links a {
+    color: #00e0ff;
+    margin: 0 14px;
+    text-decoration: none;
+    transition: color 0.16s;
+}
+.footer-links a:hover {
+    color: #00ffa1;
+}
+
+.footer-copy {
+    color: #888;
+    font-size: .94rem;
+}
+
+
+@media (max-width: 960px) {
+    .features-container { flex-direction: column; align-items: center; }
+    .testimonials-section .testimonial-slider { flex-direction: column; }
+}
